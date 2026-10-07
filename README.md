@@ -15,3 +15,6 @@
 3. Ingresa a VSCode y agrega la carpeta del proyecto
 
 Visita mi Web: [Google](https://www.google.com.pe)
+## Actualización del proyecto
+
+Se agregó la estructura inicial del sitio web y se organizaron los archivos CSS y JavaScript en sus respectivas carpetas.
