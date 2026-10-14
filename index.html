@@ -1,11 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web yarleque- proytectyo SENATI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="D&C NORY - Calidad y compromiso en cada prenda textil">
+    <title>D&C NORY - Empresa Textil</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <h1>Welcome</h1>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>D&C NORY</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>D&C NORY: Calidad y compromiso en cada prenda</h2>
+            <p>Descubre nuestra colección de prendas textiles diseñadas con excelencia</p>
+            <a href="#productos" class="btn-primary">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="productos">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop" alt="Polo D&C NORY">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Polo Básico</h3>
+                        <p>Algodón premium de alta calidad</p>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&h=400&fit=crop" alt="Pantalón D&C NORY">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Pantalón Casual</h3>
+                        <p>Comodidad y estilo para tu día a día</p>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop" alt="Buzo D&C NORY">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Buzo Premium</h3>
+                        <p>Abrigo suave y diseño moderno</p>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <div class="producto-image">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop" alt="Casaca D&C NORY">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Casaca Urbana</h3>
+                        <p>Protección y elegancia en cada estación</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="nosotros">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="nosotros-content">
+                <div class="nosotros-text">
+                    <p>
+                        <strong>D&C NORY</strong> es una empresa textil comprometida con la calidad y la excelencia en cada una de nuestras prendas. 
+                        Con años de experiencia en la industria, nos dedicamos a diseñar y confeccionar productos que combinan confort, 
+                        durabilidad y estilo contemporáneo.
+                    </p>
+                    <p>
+                        Nuestra misión es ofrecer prendas de alta calidad que satisfagan las necesidades de nuestros clientes, 
+                        manteniendo siempre los más altos estándares de producción y servicio al cliente.
+                    </p>
+                </div>
+                <div class="nosotros-image">
+                    <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&h=400&fit=crop" alt="Sobre D&C NORY">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sostenibilidad Section -->
+    <section class="sostenibilidad">
+        <div class="container">
+            <h2 class="section-title">Nuestro Compromiso con el Medio Ambiente</h2>
+            <div class="sostenibilidad-grid">
+                <div class="sostenibilidad-card">
+                    <h3>Materiales Responsables</h3>
+                    <p>Utilizamos materiales sostenibles y reciclados en la fabricación de nuestras prendas.</p>
+                </div>
+                <div class="sostenibilidad-card">
+                    <h3>Reducción de Residuos</h3>
+                    <p>Implementamos prácticas que minimizan los residuos textiles en cada etapa de producción.</p>
+                </div>
+                <div class="sostenibilidad-card">
+                    <h3>Cuidado del Medio Ambiente</h3>
+                    <p>Comprometidos con procesos eco-amigables que protegen nuestro planeta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contacto-info">
+                <p>¿Tienes alguna pregunta o quieres realizar un pedido? Contáctanos directamente por WhatsApp.</p>
+                <a href="#" id="whatsapp-btn" class="btn-whatsapp">
+                    <span class="whatsapp-icon"></span>
+                    Escribir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>D&C NORY</h3>
+                    <p>Calidad y compromiso en cada prenda</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p> Calle Rosario 793, Chincha Alta, Perú</p>
+                    <p> dyc.nory@gmail.com</p>
+                    <p> +51 903 263 203</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 D&C NORY. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="#" id="whatsapp-float" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 32 32" class="whatsapp-svg">
+            <path d="M16 2C8.268 2 2 8.268 2 16c0 2.52.663 4.938 1.843 7.07L2.05 29.95l7.08-1.79C11.062 29.337 13.48 30 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5c-2.037 0-4.012-.52-5.758-1.506l-.412-.234-4.282 1.082 1.088-4.174-.236-.416C5.3 20.488 4.78 18.506 4.78 16.5c0-6.205 5.045-11.25 11.25-11.25S27.28 10.295 27.28 16.5 22.235 27.5 16 27.5zm6.17-8.438c-.338-.17-2-1-2.308-1.11-.308-.112-.532-.17-.756.17-.224.338-.87 1.11-1.064 1.334-.194.224-.388.252-.726.084-.338-.168-1.428-.526-2.718-1.676-1.006-.896-1.684-2.002-1.878-2.34-.194-.338-.02-.52.148-.688.152-.152.338-.396.508-.594.17-.198.226-.338.338-.562.112-.224.056-.42-.028-.588-.084-.168-.756-1.822-1.036-2.496-.272-.656-.548-.566-.756-.576-.194-.01-.418-.01-.642-.01-.224 0-.588.084-.896.42-.308.338-1.178 1.15-1.178 2.806 0 1.656 1.206 3.258 1.374 3.482.168.224 2.372 3.622 5.75 5.072.802.346 1.428.554 1.916.71.804.256 1.536.22 2.114.134.646-.096 2-.818 2.28-1.608.28-.79.28-1.466.196-1.608-.084-.14-.308-.224-.646-.394z"/>
+        </svg>
+    </a>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

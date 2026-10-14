@@ -1,0 +1,545 @@
+/* Variables CSS */
+:root {
+    --color-white: #ffffff;
+    --color-black: #1a1a1a;
+    --color-dark-green: #1e4d2b;
+    --color-light-green: #2d6b3e;
+    --color-gray: #f5f5f5;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --transition: all 0.3s ease;
+}
+
+/* Reset y Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo h1 {
+    color: var(--color-dark-green);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color-dark-green);
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--color-dark-green);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-black);
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(30, 77, 43, 0.7)),
+                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    margin-top: 70px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Botones */
+.btn-primary {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--color-dark-green);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(30, 77, 43, 0.4);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-dark-green);
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+/* Productos Section */
+.productos {
+    padding: 100px 0;
+    background-color: var(--color-gray);
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.producto-card {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.producto-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.producto-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.producto-card:hover .producto-image img {
+    transform: scale(1.1);
+}
+
+.producto-info {
+    padding: 25px;
+}
+
+.producto-info h3 {
+    color: var(--color-dark-green);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.producto-info p {
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+.precio {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Nosotros Section */
+.nosotros {
+    padding: 100px 0;
+    background-color: var(--color-white);
+}
+
+.nosotros-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.nosotros-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.nosotros-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.nosotros-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Sostenibilidad Section */
+.sostenibilidad {
+    padding: 100px 0;
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+}
+
+.sostenibilidad .section-title {
+    color: var(--color-white);
+}
+
+.sostenibilidad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.sostenibilidad-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.sostenibilidad-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.sostenibilidad-card .icono {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.sostenibilidad-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.sostenibilidad-card p {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* Contacto Section */
+.contacto {
+    padding: 100px 0;
+    background-color: var(--color-gray);
+    text-align: center;
+}
+
+.contacto-info p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: var(--color-text-light);
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 40px;
+    background-color: #25D366;
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon {
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo h3 {
+    color: var(--color-dark-green);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    opacity: 0.7;
+}
+
+.footer-nav h4,
+.footer-contact h4 {
+    color: var(--color-dark-green);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav ul li {
+    margin-bottom: 10px;
+}
+
+.footer-nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.footer-nav ul li a:hover {
+    opacity: 1;
+    color: var(--color-dark-green);
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-svg {
+    width: 35px;
+    height: 35px;
+    fill: var(--color-white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        padding: 15px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background-color: var(--color-white);
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+    }
+
+    nav ul.active {
+        left: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .nosotros-content {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros-image {
+        order: -1;
+    }
+
+    .sostenibilidad-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+}
